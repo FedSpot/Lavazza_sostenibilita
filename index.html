@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8" />                                                <!--specifica la codifica del carattere ad 8 bit-->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />  <!--definisce la larghezza della pagina come elemento responsive, che si adatta alla dimensione dello schermo del dispositivo, senza nessuno zoom iniziale-->
+        <title>Lavazza - sostenibilità</title>                                  <!--etichetta della scheda sul browser-->
+         <link rel="icon" href="images/logo2.png" type="image/png">             <!--favicon nella scheda del browser con logo Lavazza-->
+        <link rel="stylesheet" href="style.css"/>                               <!--inclusione dei fogli del file contenente il codice CSS-->
+    </head>
+
+    <body>
+        <header class="navbar">
+            <div class="container">
+                <a href="https://www.lavazza.it" target="_blank"><img src="images/logo.png" width="200" height="100" alt="Lavazza"></a> <!--Icona con logo cliccabile: ti porta alla pagina ufficiale Lavazza-->
+                    <nav>                   <!--link alle varie sezioni della pagina-->
+                        <ul>                                                    
+                            <li><a href="#intro">Introduzione</a></li>
+                            <li><a href="#downloads">Bilanci</a></li>
+                            <li><a href="#contacts">Contatti</a></li>
+                            <li> <a href="https://fondazionelavazza.com/" target="_blank"><i>Fondazione Lavazza</i></a></li><!--collegamento al sito ufficiale di Fondazione Lavazza-->
+                        </ul>
+                    </nav>
+            </div>
+        </header>
+
+        <main>
+            <section id="intro" class="intro"> 
+                <p><h1>A Goal in Every Cup: <br/>l'impegno di Lavazza per la sostenibilità</h1></p>
+                <p>
+                    La <b>trasparenza</b> verso tutti gli stakeholder è un principio essenziale 
+                    che guida il nostro Gruppo in tutte le attività e che si traduce anche 
+                    nella scelta di redigere annualmente, su base volontaria, il Bilancio di 
+                    Sostenibilità del Gruppo, pubblicato per la prima volta nel 2015: 
+                    il documento riporta ogni anno il percorso di sostenibilità dell’Azienda, 
+                    riflettendone l’impegno in tutto il mondo attraverso le sue principali società.
+                </p>
+            </section>
+
+            <section id="downloads" class="downloads">
+                <h2>Scarica i nostri <i>report di sostenibilità</i></h2>
+
+                <div class="filter">                                                    <!--menu a tendina che mi permette di selezionare l'anno di cui ho interessa a scaricare il bilancio di sostenibilità-->
+                    <center><label for="yearFilter">Filtra per anno:</label>
+                    <select id="yearFilter">
+                        <option value="all" selected>Tutti</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
+                        <option value="2016">2016</option>
+                        <option value="2015">2015</option>
+                        <option value="2014">2014</option>
+                    </select></center>
+                </div>
+
+                <ul id="reportList">
+                    <li class="report-item" data-year="2024">                                           <!--elemento necessario per la selezione del report 2024-->
+                    <span>Bilancio di Sostenibilità 2024</span>                                         <!--contenuto del contenitore che indica il file di riferimento-->
+                    <a href="documents/Bilancio2024.pdf" target="_blank" download>Download PDF</a></li> <!--pulsante per il download, l'attributo target permette di aprire il file in una nuova scheda-->
+                    <li class="report-item" data-year="2023">
+                    <span>Bilancio di Sostenibilità 2023</span>
+                    <a href="documents/Bilancio2023.pdf" target="_blank" download>Download PDF</a>
+                    </li>
+                    <li class="report-item" data-year="2022">
+                    <span>Bilancio di Sostenibilità 2022</span>
+                    <a href="documents/Bilancio2022.pdf" target="_blank" download>Download PDF</a>
+                    </li>
+                    <li class="report-item" data-year="2021">
+                    <span>Bilancio di Sostenibilità 2021</span>
+                    <a href="documents/Bilancio2021.pdf" target="_blank" download>Download PDF</a>
+                    </li>
+                    <li class="report-item" data-year="2020">
+                    <span>Bilancio di Sostenibilità 2020</span>
+                    <a href="documents/Bilancio2020.pdf" target="_blank" download>Download PDF</a>
+                    </li>
+                    <li class="report-item" data-year="2019">
+                    <span>Bilancio di Sostenibilità 2019</span>
+                    <a href="documents/Bilancio2019.pdf" target="_blank" download>Download PDF</a>
+                    </li>
+                    <li class="report-item" data-year="2018">
+                    <span>Bilancio di Sostenibilità 2018</span>
+                    <a href="documents/Bilancio2018.pdf" target="_blank" download>Download PDF</a>
+                    </li>
+                    <li class="report-item" data-year="2017">
+                    <span>Bilancio di Sostenibilità 2017</span>
+                    <a href="documents/Bilancio2017.pdf" target="_blank" download>Download PDF</a>
+                    </li>
+                    <li class="report-item" data-year="2016">
+                    <span>Bilancio di Sostenibilità 2016</span>
+                    <a href="documents/Bilancio2016.pdf" target="_blank" download>Download PDF</a>
+                    </li>
+                    <li class="report-item" data-year="2015">
+                    <span>Bilancio di Sostenibilità 2015</span>
+                    <a href="documents/Bilancio2015.pdf" target="_blank" download>Download PDF</a>
+                    </li>
+                    <li class="report-item" data-year="2014">
+                    <span>Bilancio di Sostenibilità 2014</span>
+                    <a href="documents/Bilancio2014.pdf" target="_blank" download>Download PDF</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="contacts" class="contacts">
+                <h2>Contatti</h2>
+                <p>Per ulteriori informazioni, scrivici a: <a href="mailto:info@lavazza.it">info@lavazza.it</a><br/>    <!--cliccando sull'indirizzo email viene aperto in automatico il programma di posta elettronica con una nuova mail vuota, e l'indirizzo email già presente nella sezione del destinatario-->
+                oppure chiamaci al numero <font color="#B9D2B1">+39 011 23981</font></p>
+            </section>
+
+        </main>
+    
+        <footer>
+            <div class="footer-container">
+                <p class="footer-text">&copy; Lavazza. Tutti i diritti riservati.</p>
+                <div class="social-icons">                  <!--collegamenti a tutti i canali social attraverso icone-->
+                    <a href="https://www.facebook.com/lavazzaitalia/?locale=it_IT" target="_blank" aria-label="Facebook"><img src="images/fb.png" width="20" height="20"/></a> <!-- aria-label utilizzato per accessibilità: permette la lettura dell'icona da parte di screen reeder-->
+                    <a href="https://www.instagram.com/lavazzaofficial/" target="_blank" aria-label="Instagram"><img src="images/ig.png" width="20" height="20"/></a>
+                    <a href="https://x.com/lavazzagroup" target="_blank" aria-label="X"><img src="images/x.png" width="20" height="20"/></a>
+                    <a href="https://www.linkedin.com/company/lavazza-group" target="_blank" aria-label="LinkedIn"><img src="images/in.png" width="20" height="20"/></a>
+                </div>
+            </div>
+        </footer>
+
+        <!--Blocco JavaScript per la selezione del report in base all'anno-->
+        <script>
+            const yearFilter = document.getElementById("yearFilter");
+            const reportList = document.getElementById("reportList");
+            const reports = reportList.querySelectorAll(".report-item");
+
+            yearFilter.addEventListener("change", () => {
+            const selectedYear = yearFilter.value;
+
+            reports.forEach((item) => {
+                if (selectedYear === "all" || item.dataset.year === selectedYear) {
+                item.style.display = "flex";
+                } else {
+                item.style.display = "none";
+                }
+            });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,209 @@
+/* Reset base per stile uniforme su tutti i browser*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definizione del font*/
+body {
+    font-family: "Calibri", sans-serif;
+    background-color: #6F4E37;
+    color: white;
+    line-height: 1.6;
+    /*padding: 0 1rem;*/
+    scroll-behavior: smooth;
+}
+
+/* Navbar fissa in alto */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #B9D2B1;
+    color: #13293D;
+    z-index: 1000;
+}
+
+.navbar .container {
+    max-width: 1300px; /*distanza tra il logo e i link alle varie sezioni della pagina*/
+    margin: 0 auto;
+    padding: 1rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar h1 {
+    font-size: 1.8rem;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar nav ul li a {
+    color: #163052;          /*stesso colore del logo di Lavazza*/
+    text-decoration: none;    /*elimina la sottolineatura tipica dei link*/
+    font-weight: 700;
+    font-size: large;
+    transition: color 0.3s;
+}
+
+.navbar nav ul li a:hover {
+    color: #7BB2D9;
+}
+
+/* Spazio utilizzato per compensare navbar fissa */
+main {
+    padding-top: 10px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Sezioni */
+section {
+    padding-top: 1rem;
+    margin-bottom:2rem;
+}
+
+/* Intro */
+.intro {
+    padding-top: 10rem;
+    text-align: center;
+    padding-bottom:2rem;
+}
+
+.intro h1 {
+    font-size: 3rem;
+    font-family: Brush Script MT, cursive;    
+    margin-bottom: 0.5rem;
+    color: #b9d2b1;
+}
+
+/* Downloads */
+.downloads {
+    background: #B9D2B1;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+}
+
+.downloads h2 {
+    color: #6F4E37;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.downloads ul {
+    list-style: none;
+}
+
+.downloads li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #eafaf3;
+    margin-bottom: 1rem;
+    padding: 0.7rem 1rem;
+    border-radius: 6px;
+    transition: background 0.3s;
+    color: #13293D;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.downloads li:hover {
+    background: #DDF1FF;
+}
+
+.downloads a {
+    text-decoration: none;
+    color: #fff;
+    background: #13293D;;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+
+.downloads a:hover {
+    background: #7BB2D9;
+}
+
+/* Filtro */
+.filter {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.filter label {
+    font-weight: 700;
+    margin-right: 0.5rem;
+}
+
+.filter select {
+    padding: 0.2rem 0.5rem;
+    border-radius: 30px;
+    border: 1px solid #ccc;   /*bordo del selezionatore dell'anno*/
+}
+
+.contacts p{
+    color: white;
+}
+
+.contacts a{
+    color: #B9D2B1;
+}
+
+@media (max-width: 600px) { /*se la dimensione dello schermo diminuisce, viene mandato a capo il pulsante, perchè vengono messe in stack le colonne*/
+  .downloads li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+footer {
+    width: 100%;
+    background-color: #B9D2B1;
+    color: #fff;
+    padding: 10px 30px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    flex-wrap: wrap; /* Per supporto su schermi piccoli */
+}
+
+.footer-container p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.social-icons {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+
+
+/* Impaginazione responsive: stack in colonne su schermi piccoli */
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+  .footer-text,
+  .social-icons {
+    justify-content: center;
+  }
+}
